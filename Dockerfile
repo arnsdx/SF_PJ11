@@ -1,5 +1,6 @@
-FROM alpine:latest AS source
+FROM alpine:latest
 
+RUN apk update && apk add --no-cache nginx
 RUN mkdir -p /var/www/html
 RUN mkdir -p /run/nginx
 RUN rm /etc/nginx/http.d/default.conf
